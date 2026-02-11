@@ -5,20 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CNC Pressure Cleaning & Concrete Sealing | Reveal the Beauty of Your Property</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-blue: #1a6dcc;
-            --secondary-blue: #0d4a96;
-            --accent-teal: #00c1d4;
-            --light-gray: #f5f7fa;
-            --medium-gray: #e9ecef;
-            --dark-gray: #495057;
-            --dark-blue: #0a2e5a;
+            --primary-navy: #0a1f3d;
+            --secondary-navy: #0d2a52;
+            --accent-blue: #2a68c9;
+            --light-blue: #3a7ad9;
+            --medium-blue: #1a4d94;
+            --light-gray: #f4f6f9;
+            --medium-gray: #e2e6ed;
+            --dark-gray: #4a5568;
+            --darker-gray: #2d3748;
             --white: #ffffff;
-            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            --shadow-hover: 0 6px 15px rgba(0, 0, 0, 0.15);
-            --transition: all 0.3s ease;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+            --shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.18);
+            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
         
         * {
@@ -28,18 +30,19 @@
         }
         
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Open Sans', sans-serif;
             color: var(--dark-gray);
             line-height: 1.6;
             overflow-x: hidden;
+            background-color: var(--white);
         }
         
         h1, h2, h3, h4, h5 {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             font-weight: 700;
             line-height: 1.3;
             margin-bottom: 1rem;
-            color: var(--dark-blue);
+            color: var(--primary-navy);
         }
         
         .container {
@@ -51,19 +54,20 @@
         
         /* Header Styles */
         header {
-            background-color: var(--white);
+            background-color: rgba(255, 255, 255, 0.95);
             box-shadow: var(--shadow);
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
+            backdrop-filter: blur(10px);
         }
         
         .header-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 0;
+            padding: 18px 0;
         }
         
         .logo {
@@ -72,29 +76,32 @@
         }
         
         .logo-icon {
-            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            background: linear-gradient(135deg, var(--accent-blue), var(--medium-blue));
             color: var(--white);
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
+            width: 52px;
+            height: 52px;
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: 700;
-            font-size: 1.5rem;
-            margin-right: 10px;
-            box-shadow: var(--shadow);
+            font-weight: 800;
+            font-size: 1.6rem;
+            margin-right: 12px;
+            box-shadow: 0 4px 10px rgba(26, 77, 148, 0.35);
+            flex-shrink: 0;
         }
         
         .logo-text {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             font-weight: 700;
-            font-size: 1.6rem;
-            color: var(--dark-blue);
+            font-size: 1.75rem;
+            color: var(--primary-navy);
+            letter-spacing: -0.5px;
         }
         
         .logo-text span {
-            color: var(--primary-blue);
+            color: var(--accent-blue);
+            font-weight: 800;
         }
         
         nav ul {
@@ -103,22 +110,23 @@
         }
         
         nav ul li {
-            margin-left: 30px;
+            margin-left: 32px;
         }
         
         nav ul li a {
             text-decoration: none;
-            color: var(--dark-blue);
-            font-weight: 500;
+            color: var(--primary-navy);
+            font-weight: 600;
             font-size: 1.05rem;
             transition: var(--transition);
             position: relative;
-            padding: 5px 0;
+            padding: 6px 0;
+            font-family: 'Montserrat', sans-serif;
         }
         
         nav ul li a:hover,
         nav ul li a.active {
-            color: var(--primary-blue);
+            color: var(--accent-blue);
         }
         
         nav ul li a::after {
@@ -127,8 +135,9 @@
             bottom: 0;
             left: 0;
             width: 0;
-            height: 2px;
-            background-color: var(--primary-blue);
+            height: 2.5px;
+            background-color: var(--accent-blue);
+            border-radius: 2px;
             transition: var(--transition);
         }
         
@@ -141,14 +150,15 @@
             display: none;
             background: none;
             border: none;
-            font-size: 1.5rem;
-            color: var(--dark-blue);
+            font-size: 1.7rem;
+            color: var(--primary-navy);
             cursor: pointer;
+            z-index: 2000;
         }
         
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(10, 46, 90, 0.85), rgba(13, 74, 150, 0.9)), url('https://images.unsplash.com/photo-1598975652427-2a3be9fc8c55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80');
+            background: linear-gradient(rgba(10, 31, 61, 0.92), rgba(13, 42, 82, 0.95)), url('https://images.unsplash.com/photo-1598975652427-2a3be9fc8c55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80');
             background-size: cover;
             background-position: center;
             height: 100vh;
@@ -157,109 +167,147 @@
             text-align: center;
             color: var(--white);
             padding-top: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 30%, rgba(42, 104, 201, 0.15) 0%, transparent 40%), 
+                        radial-gradient(circle at 80% 70%, rgba(26, 77, 148, 0.18) 0%, transparent 45%);
+            z-index: 1;
         }
         
         .hero-content {
-            max-width: 800px;
+            max-width: 850px;
             margin: 0 auto;
             padding-top: 60px;
+            position: relative;
+            z-index: 2;
         }
         
         .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
+            font-size: 4.2rem;
+            margin-bottom: 25px;
             color: var(--white);
-            text-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+            letter-spacing: -1px;
+            font-weight: 800;
         }
         
         .hero p {
-            font-size: 1.5rem;
-            margin-bottom: 30px;
-            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.65rem;
+            margin-bottom: 40px;
+            color: rgba(255, 255, 255, 0.92);
+            font-weight: 300;
+            max-width: 750px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         .highlight {
-            color: var(--accent-teal);
+            color: var(--light-blue);
             font-weight: 700;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .highlight::after {
+            content: '';
+            position: absolute;
+            bottom: 8px;
+            left: 0;
+            width: 100%;
+            height: 12px;
+            background: rgba(42, 104, 201, 0.25);
+            z-index: -1;
+            border-radius: 8px;
         }
         
         .btn {
             display: inline-block;
-            background: var(--accent-teal);
+            background: var(--accent-blue);
             color: var(--white);
-            padding: 15px 40px;
-            border-radius: 50px;
+            padding: 16px 48px;
+            border-radius: 8px;
             text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
+            font-weight: 700;
+            font-size: 1.15rem;
             transition: var(--transition);
-            border: 2px solid var(--accent-teal);
+            border: none;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            box-shadow: var(--shadow);
+            letter-spacing: 1.5px;
+            box-shadow: 0 6px 15px rgba(26, 77, 148, 0.45);
+            font-family: 'Montserrat', sans-serif;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--medium-blue), var(--secondary-navy));
+            z-index: -1;
+            transition: var(--transition);
+            transform: scaleX(0);
+            transform-origin: right;
+        }
+        
+        .btn:hover::before {
+            transform: scaleX(1);
+            transform-origin: left;
         }
         
         .btn:hover {
-            background: transparent;
-            color: var(--accent-teal);
             transform: translateY(-3px);
-            box-shadow: var(--shadow-hover);
+            box-shadow: 0 10px 25px rgba(26, 77, 148, 0.6);
+            color: var(--white);
         }
         
         .btn-secondary {
             background: transparent;
-            color: var(--accent-teal);
-            margin-left: 15px;
-            border-color: var(--white);
+            color: var(--white);
+            margin-left: 20px;
+            border: 2px solid var(--white);
+            box-shadow: none;
+        }
+        
+        .btn-secondary::before {
+            background: rgba(255, 255, 255, 0.15);
         }
         
         .btn-secondary:hover {
             background: var(--white);
-            color: var(--dark-blue);
-        }
-        
-        .social-proof {
-            margin-top: 40px;
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-        }
-        
-        .proof-item {
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(10px);
-            padding: 15px 25px;
-            border-radius: 50px;
-            min-width: 150px;
-        }
-        
-        .proof-number {
-            font-size: 1.8rem;
-            font-weight: 700;
-            display: block;
-        }
-        
-        .proof-text {
-            font-size: 0.95rem;
-            opacity: 0.9;
+            color: var(--primary-navy);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
         }
         
         /* Services Section */
         .section {
-            padding: 100px 0;
+            padding: 110px 0;
         }
         
         .section-title {
             text-align: center;
-            margin-bottom: 70px;
+            margin-bottom: 80px;
+            position: relative;
         }
         
         .section-title h2 {
-            font-size: 2.8rem;
+            font-size: 3.1rem;
             position: relative;
             display: inline-block;
-            padding-bottom: 15px;
+            padding-bottom: 20px;
         }
         
         .section-title h2::after {
@@ -268,42 +316,61 @@
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 70px;
+            width: 75px;
             height: 4px;
-            background: var(--accent-teal);
+            background: var(--accent-blue);
             border-radius: 2px;
         }
         
         .section-title p {
             color: var(--dark-gray);
-            max-width: 700px;
-            margin: 20px auto 0;
-            font-size: 1.15rem;
+            max-width: 750px;
+            margin: 25px auto 0;
+            font-size: 1.2rem;
+            font-weight: 300;
+            letter-spacing: 0.5px;
         }
         
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 35px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
             margin-top: 30px;
         }
         
         .service-card {
             background: var(--white);
-            border-radius: 15px;
+            border-radius: 16px;
             overflow: hidden;
             box-shadow: var(--shadow);
             transition: var(--transition);
+            position: relative;
         }
         
         .service-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-12px);
             box-shadow: var(--shadow-hover);
         }
         
+        .service-card:hover .service-img img {
+            transform: scale(1.08);
+        }
+        
         .service-img {
-            height: 220px;
+            height: 240px;
             overflow: hidden;
+            position: relative;
+        }
+        
+        .service-img::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(10, 31, 61, 0.15), rgba(13, 42, 82, 0.35));
+            z-index: 1;
         }
         
         .service-img img {
@@ -311,116 +378,176 @@
             height: 100%;
             object-fit: cover;
             transition: var(--transition);
-        }
-        
-        .service-card:hover .service-img img {
-            transform: scale(1.1);
+            display: block;
         }
         
         .service-content {
-            padding: 25px;
+            padding: 32px;
         }
         
         .service-content h3 {
-            font-size: 1.8rem;
-            margin-bottom: 15px;
+            font-size: 2.0rem;
+            margin-bottom: 18px;
             display: flex;
             align-items: center;
-        }
-        
-        .service-content h3 i {
-            color: var(--accent-teal);
-            margin-right: 15px;
-            font-size: 1.8rem;
-        }
-        
-        .service-content ul {
-            list-style-type: none;
-            margin: 15px 0;
-        }
-        
-        .service-content ul li {
-            padding-left: 25px;
             position: relative;
-            margin-bottom: 10px;
+            padding-left: 38px;
         }
         
-        .service-content ul li::before {
-            content: '\f00c';
-            font-family: 'Font Awesome 6 Free';
-            font-weight: 900;
+        .service-content h3::before {
+            content: '';
             position: absolute;
             left: 0;
-            top: 0;
-            color: var(--accent-teal);
-            width: 20px;
-            height: 20px;
-            background: rgba(0, 193, 212, 0.15);
-            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 28px;
+            height: 28px;
+            background: var(--accent-blue);
+            border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 0.7rem;
+            color: white;
+            font-weight: bold;
+            font-size: 1.1rem;
+            z-index: 1;
+        }
+        
+        .service-content h3:nth-child(1)::before { content: '1'; }
+        .service-content h3:nth-child(2)::before { content: '2'; }
+        .service-content h3:nth-child(3)::before { content: '3'; }
+        
+        .service-content ul {
+            list-style-type: none;
+            margin: 20px 0 25px;
+            padding-left: 10px;
+        }
+        
+        .service-content ul li {
+            padding-left: 28px;
+            position: relative;
+            margin-bottom: 14px;
+            font-weight: 500;
+            font-size: 1.05rem;
+        }
+        
+        .service-content ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 12px;
+            height: 12px;
+            background: var(--accent-blue);
+            border-radius: 50%;
         }
         
         /* About Section */
         .about {
             background-color: var(--light-gray);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .about::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -150px;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: rgba(42, 104, 201, 0.08);
+            z-index: 0;
+        }
+        
+        .about::after {
+            content: '';
+            position: absolute;
+            bottom: -150px;
+            left: -100px;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: rgba(26, 77, 148, 0.07);
+            z-index: 0;
         }
         
         .about-content {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 50px;
+            gap: 60px;
             align-items: center;
+            position: relative;
+            z-index: 1;
         }
         
         .about-text h2 {
-            font-size: 2.8rem;
-            margin-bottom: 25px;
+            font-size: 3.0rem;
+            margin-bottom: 30px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .about-text h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--accent-blue);
+            border-radius: 2px;
+            opacity: 0.8;
         }
         
         .about-text p {
-            margin-bottom: 20px;
-            font-size: 1.05rem;
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+            font-weight: 300;
+            line-height: 1.7;
         }
         
         .about-highlights {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 25px;
-            margin-top: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
         }
         
         .highlight-card {
             background: var(--white);
-            padding: 25px;
-            border-radius: 15px;
+            padding: 30px 25px;
+            border-radius: 16px;
             text-align: center;
             box-shadow: var(--shadow);
             transition: var(--transition);
+            border-top: 4px solid var(--accent-blue);
         }
         
         .highlight-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
         }
         
         .highlight-icon {
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
-            border-radius: 50%;
+            width: 75px;
+            height: 75px;
+            background: linear-gradient(135deg, var(--accent-blue), var(--medium-blue));
+            border-radius: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 20px;
+            margin: 0 auto 22px;
             color: var(--white);
-            font-size: 1.8rem;
+            font-size: 2.0rem;
+            box-shadow: 0 8px 20px rgba(26, 77, 148, 0.3);
         }
         
         .highlight-card h3 {
-            font-size: 1.6rem;
-            margin-bottom: 10px;
+            font-size: 1.75rem;
+            margin-bottom: 12px;
+            font-weight: 700;
         }
         
         .about-img {
@@ -428,21 +555,14 @@
             overflow: hidden;
             box-shadow: var(--shadow-hover);
             position: relative;
-        }
-        
-        .about-img::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
-            opacity: 0.25;
+            min-height: 450px;
         }
         
         .about-img img {
             width: 100%;
+            height: 100%;
+            object-fit: cover;
             display: block;
             transition: var(--transition);
         }
@@ -453,11 +573,25 @@
         
         /* Testimonials Section */
         .testimonials {
-            background: linear-gradient(rgba(10, 46, 90, 0.9), rgba(13, 74, 150, 0.95)), url('https://images.unsplash.com/photo-1560436224-293347a7925d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80');
+            background: linear-gradient(rgba(10, 31, 61, 0.93), rgba(13, 42, 82, 0.96)), url('https://images.unsplash.com/photo-1560436224-293347a7925d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80');
             background-size: cover;
             background-position: center;
             color: var(--white);
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .testimonials::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 30% 20%, rgba(42, 104, 201, 0.12) 0%, transparent 35%), 
+                        radial-gradient(circle at 70% 80%, rgba(26, 77, 148, 0.15) 0%, transparent 40%);
+            z-index: 1;
         }
         
         .testimonials .section-title h2 {
@@ -465,128 +599,148 @@
         }
         
         .testimonials .section-title h2::after {
-            background: var(--accent-teal);
+            background: var(--light-blue);
         }
         
         .testimonials .section-title p {
-            color: rgba(255, 255, 255, 0.85);
+            color: rgba(255, 255, 255, 0.88);
+            max-width: 700px;
+            margin: 25px auto 0;
         }
         
         .testimonial-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
+            margin-top: 55px;
+            position: relative;
+            z-index: 2;
         }
         
         .testimonial-card {
-            background: rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 35px;
+            background: rgba(255, 255, 255, 0.09);
+            backdrop-filter: blur(12px);
+            border-radius: 24px;
+            padding: 42px 35px;
             text-align: left;
             transition: var(--transition);
-            border: 1px solid rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .testimonial-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--accent-blue);
         }
         
         .testimonial-card:hover {
-            background: rgba(255, 255, 255, 0.12);
-            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.13);
+            transform: translateY(-8px);
+            border-color: rgba(255, 255, 255, 0.25);
         }
         
         .testimonial-text {
-            font-size: 1.15rem;
-            font-style: italic;
-            margin-bottom: 25px;
+            font-size: 1.25rem;
+            font-style: normal;
+            font-weight: 300;
+            margin-bottom: 30px;
             position: relative;
-            line-height: 1.7;
-        }
-        
-        .testimonial-text::before,
-        .testimonial-text::after {
-            content: '"';
-            font-size: 3.5rem;
-            color: var(--accent-teal);
-            opacity: 0.7;
-            position: absolute;
-            line-height: 1;
+            line-height: 1.8;
+            letter-spacing: 0.5px;
         }
         
         .testimonial-text::before {
-            top: -20px;
-            left: -15px;
-        }
-        
-        .testimonial-text::after {
-            content: '"';
-            bottom: -40px;
-            right: -15px;
-            transform: rotate(180deg);
+            content: '\201C';
+            position: absolute;
+            top: -25px;
+            left: -18px;
+            font-size: 8rem;
+            color: rgba(255, 255, 255, 0.12);
+            font-family: Georgia, serif;
+            line-height: 1;
+            z-index: 0;
         }
         
         .testimonial-author {
             display: flex;
             align-items: center;
+            position: relative;
+            z-index: 1;
         }
         
         .author-img {
-            width: 60px;
-            height: 60px;
+            width: 70px;
+            height: 70px;
             border-radius: 50%;
-            background: var(--accent-teal);
+            background: linear-gradient(135deg, var(--accent-blue), var(--medium-blue));
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-right: 15px;
-            font-weight: bold;
-            font-size: 1.5rem;
+            margin-right: 20px;
+            color: var(--white);
+            font-weight: 700;
+            font-size: 1.8rem;
+            flex-shrink: 0;
+            border: 3px solid var(--white);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
         
         .author-info h4 {
-            font-size: 1.4rem;
+            font-size: 1.65rem;
             margin-bottom: 5px;
+            font-weight: 700;
+            color: var(--white);
         }
         
         .author-info p {
-            opacity: 0.8;
-            font-size: 0.95rem;
+            opacity: 0.85;
+            font-size: 1.05rem;
+            font-weight: 300;
         }
         
         /* Contact Section */
         .contact-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 50px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 55px;
         }
         
         .contact-info {
             display: flex;
             flex-direction: column;
-            gap: 30px;
+            gap: 35px;
         }
         
         .contact-item {
             display: flex;
             align-items: flex-start;
-            gap: 20px;
+            gap: 25px;
         }
         
         .contact-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
-            border-radius: 50%;
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--accent-blue), var(--medium-blue));
+            border-radius: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: var(--white);
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             flex-shrink: 0;
+            box-shadow: 0 8px 20px rgba(26, 77, 148, 0.35);
         }
         
         .contact-details h3 {
-            font-size: 1.6rem;
-            margin-bottom: 8px;
+            font-size: 1.85rem;
+            margin-bottom: 12px;
+            font-weight: 700;
         }
         
         .contact-details p, 
@@ -595,95 +749,160 @@
             text-decoration: none;
             transition: var(--transition);
             display: block;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
+            font-weight: 500;
+            font-size: 1.05rem;
         }
         
         .contact-details a:hover {
-            color: var(--primary-blue);
+            color: var(--accent-blue);
+            padding-left: 5px;
         }
         
         .contact-form {
             background: var(--white);
-            padding: 40px;
-            border-radius: 20px;
+            padding: 45px;
+            border-radius: 24px;
             box-shadow: var(--shadow);
+            position: relative;
+            z-index: 2;
+        }
+        
+        .contact-form::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(90deg, var(--accent-blue), var(--light-blue));
+            border-radius: 24px 24px 0 0;
         }
         
         .form-group {
-            margin-bottom: 25px;
+            margin-bottom: 28px;
         }
         
         .form-group label {
             display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-            color: var(--dark-blue);
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: var(--primary-navy);
+            font-size: 1.05rem;
+            letter-spacing: 0.5px;
         }
         
         .form-control {
             width: 100%;
-            padding: 15px;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            font-family: 'Roboto', sans-serif;
-            font-size: 1rem;
+            padding: 16px 20px;
+            border: 1px solid var(--medium-gray);
+            border-radius: 12px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.05rem;
             transition: var(--transition);
+            background-color: var(--white);
         }
         
         .form-control:focus {
-            border-color: var(--primary-blue);
-            box-shadow: 0 0 0 3px rgba(26, 109, 204, 0.2);
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 0 3px rgba(42, 104, 201, 0.2);
             outline: none;
         }
         
         textarea.form-control {
-            min-height: 150px;
+            min-height: 160px;
             resize: vertical;
         }
         
         .submit-btn {
-            background: var(--primary-blue);
+            background: linear-gradient(135deg, var(--accent-blue), var(--medium-blue));
             color: var(--white);
             border: none;
-            padding: 15px 40px;
-            border-radius: 50px;
-            font-family: 'Poppins', sans-serif;
-            font-weight: 600;
-            font-size: 1.05rem;
+            padding: 18px 45px;
+            border-radius: 10px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.15rem;
             cursor: pointer;
             transition: var(--transition);
             width: 100%;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
             margin-top: 10px;
+            box-shadow: 0 6px 15px rgba(26, 77, 148, 0.35);
+            position: relative;
+            overflow: hidden;
         }
         
         .submit-btn:hover {
-            background: var(--secondary-blue);
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-hover);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(26, 77, 148, 0.45);
+        }
+        
+        .submit-btn::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.7s;
+        }
+        
+        .submit-btn:hover::after {
+            left: 100%;
         }
         
         /* Footer */
         footer {
-            background: var(--dark-blue);
+            background: var(--primary-navy);
             color: rgba(255, 255, 255, 0.85);
-            padding: 70px 0 0;
+            padding: 85px 0 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        footer::before {
+            content: '';
+            position: absolute;
+            top: -150px;
+            right: -100px;
+            width: 450px;
+            height: 450px;
+            border-radius: 50%;
+            background: rgba(42, 104, 201, 0.12);
+            z-index: 0;
+        }
+        
+        footer::after {
+            content: '';
+            position: absolute;
+            bottom: -200px;
+            left: -50px;
+            width: 550px;
+            height: 550px;
+            border-radius: 50%;
+            background: rgba(26, 77, 148, 0.15);
+            z-index: 0;
         }
         
         .footer-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 50px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 45px;
+            margin-bottom: 65px;
+            position: relative;
+            z-index: 1;
         }
         
         .footer-col h3 {
             color: var(--white);
-            font-size: 1.8rem;
-            margin-bottom: 25px;
+            font-size: 1.95rem;
+            margin-bottom: 28px;
             position: relative;
-            padding-bottom: 10px;
+            padding-bottom: 12px;
+            font-weight: 700;
         }
         
         .footer-col h3::after {
@@ -691,87 +910,128 @@
             position: absolute;
             bottom: 0;
             left: 0;
-            width: 40px;
+            width: 45px;
             height: 3px;
-            background: var(--accent-teal);
+            background: var(--accent-blue);
             border-radius: 2px;
         }
         
         .footer-col p {
-            margin: 15px 0;
+            margin: 18px 0;
             line-height: 1.7;
+            font-weight: 300;
+            letter-spacing: 0.5px;
         }
         
         .footer-links {
             list-style: none;
-            margin-top: 20px;
+            margin-top: 22px;
         }
         
         .footer-links li {
-            margin-bottom: 12px;
+            margin-bottom: 14px;
         }
         
         .footer-links a {
-            color: rgba(255, 255, 255, 0.75);
+            color: rgba(255, 255, 255, 0.78);
             text-decoration: none;
             transition: var(--transition);
             display: block;
-            padding: 5px 0;
+            padding: 6px 0;
+            font-weight: 400;
+            position: relative;
+            padding-left: 22px;
+        }
+        
+        .footer-links a::before {
+            content: '\f105';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 6px;
+            color: var(--accent-blue);
+            font-size: 0.9rem;
         }
         
         .footer-links a:hover {
-            color: var(--accent-teal);
+            color: var(--light-blue);
             transform: translateX(5px);
-        }
-        
-        .footer-links i {
-            margin-right: 10px;
-            width: 20px;
         }
         
         .copyright {
             text-align: center;
-            padding: 25px 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            font-size: 0.95rem;
-            margin-top: 20px;
+            padding: 30px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            font-size: 1.02rem;
+            margin-top: 25px;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+            position: relative;
+            z-index: 1;
         }
         
         .social-links {
             display: flex;
-            gap: 15px;
-            margin-top: 20px;
+            gap: 18px;
+            margin-top: 25px;
         }
         
         .social-links a {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.1);
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            background: rgba(255, 255, 255, 0.12);
             color: var(--white);
             transition: var(--transition);
+            font-size: 1.3rem;
         }
         
         .social-links a:hover {
-            background: var(--accent-teal);
-            transform: translateY(-3px);
+            background: var(--accent-blue);
+            transform: translateY(-4px);
+        }
+        
+        .business-details {
+            background: rgba(13, 42, 82, 0.45);
+            padding: 25px;
+            border-radius: 16px;
+            margin-top: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        
+        .business-details p {
+            margin: 8px 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        .business-details i {
+            color: var(--accent-blue);
+            margin-right: 12px;
+            width: 20px;
+            font-size: 1.1rem;
         }
         
         /* Responsive Design */
         @media (max-width: 992px) {
             .hero h1 {
-                font-size: 3rem;
+                font-size: 3.6rem;
             }
             
             .hero p {
-                font-size: 1.3rem;
+                font-size: 1.45rem;
             }
             
             .section {
-                padding: 80px 0;
+                padding: 90px 0;
+            }
+            
+            .section-title h2 {
+                font-size: 2.8rem;
             }
         }
         
@@ -782,16 +1042,17 @@
             
             nav ul {
                 position: fixed;
-                top: 80px;
+                top: 85px;
                 right: -100%;
                 flex-direction: column;
                 background: var(--white);
-                width: 80%;
-                height: calc(100vh - 80px);
-                padding: 30px;
-                box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+                width: 85%;
+                height: calc(100vh - 85px);
+                padding: 40px 30px;
+                box-shadow: -5px 0 25px rgba(0, 0, 0, 0.15);
                 transition: var(--transition);
                 z-index: 999;
+                border-radius: 20px 0 0 20px;
             }
             
             nav ul.active {
@@ -799,19 +1060,21 @@
             }
             
             nav ul li {
-                margin: 15px 0;
+                margin: 18px 0;
             }
             
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 3.1rem;
             }
             
             .hero p {
-                font-size: 1.2rem;
+                font-size: 1.35rem;
+                margin-bottom: 35px;
             }
             
             .btn {
-                display: block;
+                padding: 15px 40px;
+                font-size: 1.1rem;
                 width: 100%;
                 margin-bottom: 15px;
             }
@@ -820,22 +1083,22 @@
                 margin-left: 0;
             }
             
-            .social-proof {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .proof-item {
-                width: 100%;
-                max-width: 300px;
-            }
-            
             .section-title h2 {
-                font-size: 2.3rem;
+                font-size: 2.5rem;
             }
             
             .contact-form {
-                padding: 30px 25px;
+                padding: 35px 25px;
+            }
+            
+            .logo-text {
+                font-size: 1.6rem;
+            }
+            
+            .logo-icon {
+                width: 48px;
+                height: 48px;
+                font-size: 1.5rem;
             }
         }
         
@@ -844,33 +1107,49 @@
                 height: auto;
                 min-height: 100vh;
                 padding-top: 80px;
-                padding-bottom: 50px;
+                padding-bottom: 60px;
             }
             
-            .hero-content {
-                padding-top: 30px;
+            .hero h1 {
+                font-size: 2.7rem;
+                letter-spacing: -0.5px;
+            }
+            
+            .hero p {
+                font-size: 1.25rem;
             }
             
             .section {
-                padding: 60px 0;
+                padding: 75px 0;
             }
             
             .section-title h2 {
-                font-size: 2rem;
+                font-size: 2.25rem;
             }
             
             .section-title p {
-                font-size: 1rem;
+                font-size: 1.05rem;
             }
             
-            .logo-text {
-                font-size: 1.4rem;
+            .service-content h3 {
+                font-size: 1.8rem;
             }
             
-            .logo-icon {
-                width: 40px;
-                height: 40px;
-                font-size: 1.2rem;
+            .contact-item {
+                flex-direction: column;
+                align-items: flex-start;
+                text-align: left;
+            }
+            
+            .contact-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 1.6rem;
+            }
+            
+            .copyright {
+                font-size: 0.95rem;
+                padding: 25px 15px;
             }
         }
     </style>
@@ -907,20 +1186,6 @@
                 <a href="#contact" class="btn">Get Free Quote</a>
                 <a href="#services" class="btn btn-secondary">Our Services</a>
             </div>
-            <div class="social-proof">
-                <div class="proof-item">
-                    <span class="proof-number">1.1K</span>
-                    <span class="proof-text">Instagram Followers</span>
-                </div>
-                <div class="proof-item">
-                    <span class="proof-number">255</span>
-                    <span class="proof-text">Following</span>
-                </div>
-                <div class="proof-item">
-                    <span class="proof-number">⭐️ 5.0</span>
-                    <span class="proof-text">Customer Rating</span>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -928,8 +1193,8 @@
     <section class="section" id="services">
         <div class="container">
             <div class="section-title">
-                <h2>Our Services</h2>
-                <p>We provide professional pressure cleaning and concrete sealing services to restore the beauty of your property with minimal disruption to your daily life.</p>
+                <h2>Our Professional Services</h2>
+                <p>We provide expert pressure cleaning and concrete sealing services to restore and protect your property's surfaces with meticulous attention to detail and minimal disruption to your daily life.</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
@@ -937,13 +1202,13 @@
                         <img src="https://images.unsplash.com/photo-1600864857018-2f5c962044d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Pressure Cleaning">
                     </div>
                     <div class="service-content">
-                        <h3><i class="fas fa-water"></i> Pressure Cleaning</h3>
-                        <p>Restore your property's appearance with our professional pressure cleaning services. We safely remove dirt, grime, mold, and stains from various surfaces.</p>
+                        <h3>Pressure Cleaning</h3>
+                        <p>Restore your property's appearance with our professional pressure cleaning services. We safely remove dirt, grime, mold, and stains from various surfaces without causing damage.</p>
                         <ul>
                             <li>Driveways & Walkways</li>
                             <li>House Washing & Siding</li>
                             <li>Fences & Decks</li>
-                            <li>Roof Cleaning</li>
+                            <li>Roof & Gutter Cleaning</li>
                             <li>Graffiti Removal</li>
                         </ul>
                         <a href="#contact" class="btn">Get Quote</a>
@@ -954,8 +1219,8 @@
                         <img src="https://images.unsplash.com/photo-1598975652427-2a3be9fc8c55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Concrete Sealing">
                     </div>
                     <div class="service-content">
-                        <h3><i class="fas fa-shield-alt"></i> Concrete Sealing</h3>
-                        <p>Protect your concrete surfaces from damage and enhance their appearance with our professional sealing services. We use premium sealants for long-lasting protection.</p>
+                        <h3>Concrete Sealing</h3>
+                        <p>Protect your concrete surfaces from damage and enhance their appearance with our professional sealing services. We use premium sealants for long-lasting protection against stains and weathering.</p>
                         <ul>
                             <li>Driveway Sealing</li>
                             <li>Patio & Pool Deck Sealing</li>
@@ -971,14 +1236,14 @@
                         <img src="https://images.unsplash.com/photo-1617065794276-24c77f38b6c9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Specialty Services">
                     </div>
                     <div class="service-content">
-                        <h3><i class="fas fa-sparkles"></i> Specialty Services</h3>
-                        <p>We offer additional services to keep your property looking its best year-round. Our team is equipped to handle various cleaning and protection challenges.</p>
+                        <h3>Specialty Services</h3>
+                        <p>We offer additional services to keep your property looking its best year-round. Our team is equipped to handle various cleaning and protection challenges with professional expertise.</p>
                         <ul>
                             <li>Tile & Grout Cleaning</li>
-                            <li>Gutter Cleaning</li>
-                            <li>Window Washing</li>
                             <li>Commercial Property Maintenance</li>
+                            <li>Window Washing</li>
                             <li>Pre-Sale Property Preparation</li>
+                            <li>Regular Maintenance Programs</li>
                         </ul>
                         <a href="#contact" class="btn">Get Quote</a>
                     </div>
@@ -992,25 +1257,25 @@
         <div class="container">
             <div class="about-content">
                 <div class="about-text">
-                    <h2>Family Owned & Operated Since 2010</h2>
+                    <h2>Family Owned Excellence Since 2010</h2>
                     <p>CNC Pressure Cleaning And Concrete Sealing is a small family-run business dedicated to providing exceptional cleaning and sealing services to homeowners and businesses across the region.</p>
                     <p>We believe in building lasting relationships with our clients through honest work, transparent pricing, and outstanding customer service. Your satisfaction is our top priority.</p>
-                    <p>When you choose us, you're choosing a team that treats your property with the same care and respect as if it were our own.</p>
+                    <p>When you choose us, you're choosing a team that treats your property with the same care and respect as if it were our own. We take pride in delivering results that exceed expectations.</p>
                     
                     <div class="about-highlights">
                         <div class="highlight-card">
                             <div class="highlight-icon">
-                                <i class="fas fa-user-check"></i>
+                                <i class="fas fa-comment-dollar"></i>
                             </div>
                             <h3>Hassle-Free Quotes</h3>
-                            <p>No hidden fees or surprises. Get a clear, upfront quote for your project.</p>
+                            <p>No hidden fees or surprises. Get a clear, upfront quote for your project with no obligation.</p>
                         </div>
                         <div class="highlight-card">
                             <div class="highlight-icon">
                                 <i class="fas fa-shield-alt"></i>
                             </div>
                             <h3>Fully Insured & Licensed</h3>
-                            <p>Peace of mind knowing your property is protected by our comprehensive insurance coverage.</p>
+                            <p>Complete peace of mind knowing your property is protected by our comprehensive insurance coverage and professional licensing.</p>
                         </div>
                     </div>
                 </div>
@@ -1026,7 +1291,7 @@
         <div class="container">
             <div class="section-title">
                 <h2>What Our Customers Say</h2>
-                <p>Don't just take our word for it - hear from our satisfied customers who have experienced the CNC difference firsthand.</p>
+                <p>Hear from our satisfied customers who have experienced the CNC difference firsthand and seen the transformation of their properties.</p>
             </div>
             <div class="testimonial-grid">
                 <div class="testimonial-card">
@@ -1073,7 +1338,7 @@
     <section class="section" id="contact">
         <div class="container">
             <div class="section-title">
-                <h2>Contact Us</h2>
+                <h2>Contact Us Today</h2>
                 <p>Ready to reveal the beauty of your property? Contact us today for a free, no-obligation quote. We respond to all inquiries within 24 hours.</p>
             </div>
             <div class="contact-container">
@@ -1083,7 +1348,7 @@
                             <i class="fas fa-phone-alt"></i>
                         </div>
                         <div class="contact-details">
-                            <h3>Call Us</h3>
+                            <h3>Call Us Directly</h3>
                             <a href="tel:+61418247842">+61 418 247 842</a>
                             <p>Mon-Fri: 7am - 6pm<br>Sat: 8am - 4pm</p>
                         </div>
@@ -1102,9 +1367,12 @@
                             <i class="fas fa-file-contract"></i>
                         </div>
                         <div class="contact-details">
-                            <h3>Business Details</h3>
-                            <p>Licence: 486803C<br>ABN: 93 667 795 066</p>
-                            <p>Fully Insured & Licensed</p>
+                            <h3>Business Credentials</h3>
+                            <div class="business-details">
+                                <p><i class="fas fa-id-card"></i> Licence: 486803C</p>
+                                <p><i class="fas fa-file-alt"></i> ABN: 93 667 795 066</p>
+                                <p><i class="fas fa-shield-alt"></i> Fully Insured & Licensed</p>
+                            </div>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -1112,10 +1380,9 @@
                             <i class="fab fa-instagram"></i>
                         </div>
                         <div class="contact-details">
-                            <h3>Follow Us</h3>
+                            <h3>Follow Our Work</h3>
                             <a href="https://instagram.com/cnc_pressure_cleaning" target="_blank">@cnc_pressure_cleaning</a>
-                            <p>1.1K followers • 255 following</p>
-                            <p>Check out our before & after photos!</p>
+                            <p>See our before & after transformations and latest projects on Instagram</p>
                         </div>
                     </div>
                 </div>
@@ -1161,9 +1428,9 @@
                 <div class="footer-col">
                     <div class="logo">
                         <div class="logo-icon">CNC</div>
-                        <div class="logo-text" style="color: white; font-size: 1.5rem;">CNC <span>Pressure Cleaning</span></div>
+                        <div class="logo-text" style="color: white; font-size: 1.65rem; font-weight: 700;">CNC <span>Pressure Cleaning</span></div>
                     </div>
-                    <p>Revealing the beauty of properties across Sydney with professional pressure cleaning and concrete sealing services since 2010.</p>
+                    <p>Revealing the beauty of properties across Sydney with professional pressure cleaning and concrete sealing services since 2010. Family owned and operated with a commitment to excellence.</p>
                     <div class="social-links">
                         <a href="https://instagram.com/cnc_pressure_cleaning" target="_blank"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -1173,36 +1440,39 @@
                 <div class="footer-col">
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
-                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
-                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Services</a></li>
-                        <li><a href="#about"><i class="fas fa-chevron-right"></i> About Us</a></li>
-                        <li><a href="#testimonials"><i class="fas fa-chevron-right"></i> Testimonials</a></li>
-                        <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h3>Our Services</h3>
                     <ul class="footer-links">
-                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Pressure Cleaning</a></li>
-                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Concrete Sealing</a></li>
-                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Driveway Cleaning</a></li>
-                        <li><a href="#services"><i class="fas fa-chevron-right"></i> House Washing</a></li>
-                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Commercial Services</a></li>
+                        <li><a href="#services">Pressure Cleaning</a></li>
+                        <li><a href="#services">Concrete Sealing</a></li>
+                        <li><a href="#services">Driveway Restoration</a></li>
+                        <li><a href="#services">House Washing</a></li>
+                        <li><a href="#services">Commercial Services</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h3>Contact Info</h3>
+                    <h3>Contact Information</h3>
                     <ul class="footer-links">
                         <li><i class="fas fa-phone"></i> +61 418 247 842</li>
                         <li><i class="fas fa-envelope"></i> info@cncpressurecleaning.com.au</li>
                         <li><i class="fas fa-clock"></i> Mon-Sat: 7am - 6pm</li>
-                        <li><i class="fas fa-file-contract"></i> Licence: 486803C</li>
-                        <li><i class="fas fa-file-alt"></i> ABN: 93 667 795 066</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Serving Greater Sydney Area</li>
                     </ul>
+                    <div class="business-details" style="margin-top: 20px; background: rgba(255,255,255,0.1);">
+                        <p><i class="fas fa-id-card"></i> Licence: 486803C</p>
+                        <p><i class="fas fa-file-alt"></i> ABN: 93 667 795 066</p>
+                    </div>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2026 CNC Pressure Cleaning And Concrete Sealing PTY Ltd. All Rights Reserved. | Website Design Inspired by ZD Pressure Washing Interface</p>
+                <p>&copy; 2026 CNC Pressure Cleaning And Concrete Sealing PTY Ltd. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
@@ -1237,7 +1507,7 @@
                 const targetElement = document.querySelector(targetId);
                 if(targetElement) {
                     window.scrollTo({
-                        top: targetElement.offsetTop - 80,
+                        top: targetElement.offsetTop - 85,
                         behavior: 'smooth'
                     });
                 }
@@ -1258,13 +1528,17 @@
         window.addEventListener('scroll', () => {
             const header = document.querySelector('header');
             if(window.scrollY > 100) {
-                header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.15)';
+                header.style.boxShadow = '0 4px 25px rgba(0, 0, 0, 0.15)';
                 header.style.background = 'rgba(255, 255, 255, 0.98)';
             } else {
                 header.style.boxShadow = 'var(--shadow)';
-                header.style.background = 'var(--white)';
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
             }
         });
+        
+        // Initialize with menu closed
+        navMenu.classList.remove('active');
+        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
     </script>
 </body>
 </html>
