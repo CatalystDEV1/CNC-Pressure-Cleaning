@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CNC Pressure Cleaning & Concrete Sealing | Reveal the Beauty of Your Property</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #1a6dcc;
+            --secondary-blue: #0d4a96;
+            --accent-teal: #00c1d4;
+            --light-gray: #f5f7fa;
+            --medium-gray: #e9ecef;
+            --dark-gray: #495057;
+            --dark-blue: #0a2e5a;
+            --white: #ffffff;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --shadow-hover: 0 6px 15px rgba(0, 0, 0, 0.15);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--dark-gray);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+            color: var(--dark-blue);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-icon {
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            color: var(--white);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-right: 10px;
+            box-shadow: var(--shadow);
+        }
+        
+        .logo-text {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1.6rem;
+            color: var(--dark-blue);
+        }
+        
+        .logo-text span {
+            color: var(--primary-blue);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark-blue);
+            font-weight: 500;
+            font-size: 1.05rem;
+            transition: var(--transition);
+            position: relative;
+            padding: 5px 0;
+        }
+        
+        nav ul li a:hover,
+        nav ul li a.active {
+            color: var(--primary-blue);
+        }
+        
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-blue);
+            transition: var(--transition);
+        }
+        
+        nav ul li a:hover::after,
+        nav ul li a.active::after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--dark-blue);
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(10, 46, 90, 0.85), rgba(13, 74, 150, 0.9)), url('https://images.unsplash.com/photo-1598975652427-2a3be9fc8c55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+            padding-top: 80px;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding-top: 60px;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: var(--white);
+            text-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .highlight {
+            color: var(--accent-teal);
+            font-weight: 700;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--accent-teal);
+            color: var(--white);
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            border: 2px solid var(--accent-teal);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: var(--shadow);
+        }
+        
+        .btn:hover {
+            background: transparent;
+            color: var(--accent-teal);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--accent-teal);
+            margin-left: 15px;
+            border-color: var(--white);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--white);
+            color: var(--dark-blue);
+        }
+        
+        .social-proof {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .proof-item {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 15px 25px;
+            border-radius: 50px;
+            min-width: 150px;
+        }
+        
+        .proof-number {
+            font-size: 1.8rem;
+            font-weight: 700;
+            display: block;
+        }
+        
+        .proof-text {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+        
+        /* Services Section */
+        .section {
+            padding: 100px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.8rem;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 4px;
+            background: var(--accent-teal);
+            border-radius: 2px;
+        }
+        
+        .section-title p {
+            color: var(--dark-gray);
+            max-width: 700px;
+            margin: 20px auto 0;
+            font-size: 1.15rem;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 35px;
+            margin-top: 30px;
+        }
+        
+        .service-card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .service-img {
+            height: 220px;
+            overflow: hidden;
+        }
+        
+        .service-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .service-card:hover .service-img img {
+            transform: scale(1.1);
+        }
+        
+        .service-content {
+            padding: 25px;
+        }
+        
+        .service-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .service-content h3 i {
+            color: var(--accent-teal);
+            margin-right: 15px;
+            font-size: 1.8rem;
+        }
+        
+        .service-content ul {
+            list-style-type: none;
+            margin: 15px 0;
+        }
+        
+        .service-content ul li {
+            padding-left: 25px;
+            position: relative;
+            margin-bottom: 10px;
+        }
+        
+        .service-content ul li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--accent-teal);
+            width: 20px;
+            height: 20px;
+            background: rgba(0, 193, 212, 0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+        }
+        
+        /* About Section */
+        .about {
+            background-color: var(--light-gray);
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .about-text h2 {
+            font-size: 2.8rem;
+            margin-bottom: 25px;
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+        }
+        
+        .about-highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .highlight-card {
+            background: var(--white);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .highlight-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .highlight-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: var(--white);
+            font-size: 1.8rem;
+        }
+        
+        .highlight-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+        }
+        
+        .about-img {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-hover);
+            position: relative;
+        }
+        
+        .about-img::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            opacity: 0.25;
+        }
+        
+        .about-img img {
+            width: 100%;
+            display: block;
+            transition: var(--transition);
+        }
+        
+        .about-img:hover img {
+            transform: scale(1.05);
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            background: linear-gradient(rgba(10, 46, 90, 0.9), rgba(13, 74, 150, 0.95)), url('https://images.unsplash.com/photo-1560436224-293347a7925d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            text-align: center;
+        }
+        
+        .testimonials .section-title h2 {
+            color: var(--white);
+        }
+        
+        .testimonials .section-title h2::after {
+            background: var(--accent-teal);
+        }
+        
+        .testimonials .section-title p {
+            color: rgba(255, 255, 255, 0.85);
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 35px;
+            text-align: left;
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        
+        .testimonial-card:hover {
+            background: rgba(255, 255, 255, 0.12);
+            transform: translateY(-5px);
+        }
+        
+        .testimonial-text {
+            font-size: 1.15rem;
+            font-style: italic;
+            margin-bottom: 25px;
+            position: relative;
+            line-height: 1.7;
+        }
+        
+        .testimonial-text::before,
+        .testimonial-text::after {
+            content: '"';
+            font-size: 3.5rem;
+            color: var(--accent-teal);
+            opacity: 0.7;
+            position: absolute;
+            line-height: 1;
+        }
+        
+        .testimonial-text::before {
+            top: -20px;
+            left: -15px;
+        }
+        
+        .testimonial-text::after {
+            content: '"';
+            bottom: -40px;
+            right: -15px;
+            transform: rotate(180deg);
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--accent-teal);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        
+        .author-info h4 {
+            font-size: 1.4rem;
+            margin-bottom: 5px;
+        }
+        
+        .author-info p {
+            opacity: 0.8;
+            font-size: 0.95rem;
+        }
+        
+        /* Contact Section */
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+        
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        
+        .contact-details h3 {
+            font-size: 1.6rem;
+            margin-bottom: 8px;
+        }
+        
+        .contact-details p, 
+        .contact-details a {
+            color: var(--dark-gray);
+            text-decoration: none;
+            transition: var(--transition);
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .contact-details a:hover {
+            color: var(--primary-blue);
+        }
+        
+        .contact-form {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--dark-blue);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(26, 109, 204, 0.2);
+            outline: none;
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background: var(--primary-blue);
+            color: var(--white);
+            border: none;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 1.05rem;
+            cursor: pointer;
+            transition: var(--transition);
+            width: 100%;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 10px;
+        }
+        
+        .submit-btn:hover {
+            background: var(--secondary-blue);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark-blue);
+            color: rgba(255, 255, 255, 0.85);
+            padding: 70px 0 0;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+        
+        .footer-col h3 {
+            color: var(--white);
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--accent-teal);
+            border-radius: 2px;
+        }
+        
+        .footer-col p {
+            margin: 15px 0;
+            line-height: 1.7;
+        }
+        
+        .footer-links {
+            list-style: none;
+            margin-top: 20px;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.75);
+            text-decoration: none;
+            transition: var(--transition);
+            display: block;
+            padding: 5px 0;
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent-teal);
+            transform: translateX(5px);
+        }
+        
+        .footer-links i {
+            margin-right: 10px;
+            width: 20px;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding: 25px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.95rem;
+            margin-top: 20px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background: var(--accent-teal);
+            transform: translateY(-3px);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+            
+            .hero p {
+                font-size: 1.3rem;
+            }
+            
+            .section {
+                padding: 80px 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            nav ul {
+                position: fixed;
+                top: 80px;
+                right: -100%;
+                flex-direction: column;
+                background: var(--white);
+                width: 80%;
+                height: calc(100vh - 80px);
+                padding: 30px;
+                box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+                transition: var(--transition);
+                z-index: 999;
+            }
+            
+            nav ul.active {
+                right: 0;
+            }
+            
+            nav ul li {
+                margin: 15px 0;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .btn {
+                display: block;
+                width: 100%;
+                margin-bottom: 15px;
+            }
+            
+            .btn-secondary {
+                margin-left: 0;
+            }
+            
+            .social-proof {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .proof-item {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .section-title h2 {
+                font-size: 2.3rem;
+            }
+            
+            .contact-form {
+                padding: 30px 25px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero {
+                height: auto;
+                min-height: 100vh;
+                padding-top: 80px;
+                padding-bottom: 50px;
+            }
+            
+            .hero-content {
+                padding-top: 30px;
+            }
+            
+            .section {
+                padding: 60px 0;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .section-title p {
+                font-size: 1rem;
+            }
+            
+            .logo-text {
+                font-size: 1.4rem;
+            }
+            
+            .logo-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-icon">CNC</div>
+                <div class="logo-text">CNC <span>Pressure Cleaning</span></div>
+            </div>
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <h1>Reveal the Beauty of Your Property</h1>
+            <p>Professional <span class="highlight">Pressure Cleaning</span> & <span class="highlight">Concrete Sealing</span> Services for Homes and Businesses</p>
+            <div>
+                <a href="#contact" class="btn">Get Free Quote</a>
+                <a href="#services" class="btn btn-secondary">Our Services</a>
+            </div>
+            <div class="social-proof">
+                <div class="proof-item">
+                    <span class="proof-number">1.1K</span>
+                    <span class="proof-text">Instagram Followers</span>
+                </div>
+                <div class="proof-item">
+                    <span class="proof-number">255</span>
+                    <span class="proof-text">Following</span>
+                </div>
+                <div class="proof-item">
+                    <span class="proof-number">⭐️ 5.0</span>
+                    <span class="proof-text">Customer Rating</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+                <p>We provide professional pressure cleaning and concrete sealing services to restore the beauty of your property with minimal disruption to your daily life.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1600864857018-2f5c962044d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Pressure Cleaning">
+                    </div>
+                    <div class="service-content">
+                        <h3><i class="fas fa-water"></i> Pressure Cleaning</h3>
+                        <p>Restore your property's appearance with our professional pressure cleaning services. We safely remove dirt, grime, mold, and stains from various surfaces.</p>
+                        <ul>
+                            <li>Driveways & Walkways</li>
+                            <li>House Washing & Siding</li>
+                            <li>Fences & Decks</li>
+                            <li>Roof Cleaning</li>
+                            <li>Graffiti Removal</li>
+                        </ul>
+                        <a href="#contact" class="btn">Get Quote</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1598975652427-2a3be9fc8c55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Concrete Sealing">
+                    </div>
+                    <div class="service-content">
+                        <h3><i class="fas fa-shield-alt"></i> Concrete Sealing</h3>
+                        <p>Protect your concrete surfaces from damage and enhance their appearance with our professional sealing services. We use premium sealants for long-lasting protection.</p>
+                        <ul>
+                            <li>Driveway Sealing</li>
+                            <li>Patio & Pool Deck Sealing</li>
+                            <li>Garage Floor Coating</li>
+                            <li>Stamped Concrete Protection</li>
+                            <li>Crack Repair & Resurfacing</li>
+                        </ul>
+                        <a href="#contact" class="btn">Get Quote</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1617065794276-24c77f38b6c9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Specialty Services">
+                    </div>
+                    <div class="service-content">
+                        <h3><i class="fas fa-sparkles"></i> Specialty Services</h3>
+                        <p>We offer additional services to keep your property looking its best year-round. Our team is equipped to handle various cleaning and protection challenges.</p>
+                        <ul>
+                            <li>Tile & Grout Cleaning</li>
+                            <li>Gutter Cleaning</li>
+                            <li>Window Washing</li>
+                            <li>Commercial Property Maintenance</li>
+                            <li>Pre-Sale Property Preparation</li>
+                        </ul>
+                        <a href="#contact" class="btn">Get Quote</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Family Owned & Operated Since 2010</h2>
+                    <p>CNC Pressure Cleaning And Concrete Sealing is a small family-run business dedicated to providing exceptional cleaning and sealing services to homeowners and businesses across the region.</p>
+                    <p>We believe in building lasting relationships with our clients through honest work, transparent pricing, and outstanding customer service. Your satisfaction is our top priority.</p>
+                    <p>When you choose us, you're choosing a team that treats your property with the same care and respect as if it were our own.</p>
+                    
+                    <div class="about-highlights">
+                        <div class="highlight-card">
+                            <div class="highlight-icon">
+                                <i class="fas fa-user-check"></i>
+                            </div>
+                            <h3>Hassle-Free Quotes</h3>
+                            <p>No hidden fees or surprises. Get a clear, upfront quote for your project.</p>
+                        </div>
+                        <div class="highlight-card">
+                            <div class="highlight-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h3>Fully Insured & Licensed</h3>
+                            <p>Peace of mind knowing your property is protected by our comprehensive insurance coverage.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-img">
+                    <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Family Business">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Customers Say</h2>
+                <p>Don't just take our word for it - hear from our satisfied customers who have experienced the CNC difference firsthand.</p>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        CNC Pressure Cleaning transformed our old, stained driveway into something that looks brand new! The team was professional, efficient, and left our property cleaner than when they arrived. Highly recommend their services!
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">MJ</div>
+                        <div class="author-info">
+                            <h4>Michael Johnson</h4>
+                            <p>Residential Customer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        As a business owner, I needed a reliable company to maintain our storefront's appearance. CNC has been our go-to for years. Their concrete sealing service has saved us thousands in potential repairs. Excellent work!
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">SL</div>
+                        <div class="author-info">
+                            <h4>Sarah Lee</h4>
+                            <p>Commercial Client</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        I was amazed at how they restored our weathered deck without damaging the wood. The team was respectful of our home and completed the job ahead of schedule. The sealing service has made our deck look beautiful for years now.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">DT</div>
+                        <div class="author-info">
+                            <h4>David Thompson</h4>
+                            <p>Homeowner</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Ready to reveal the beauty of your property? Contact us today for a free, no-obligation quote. We respond to all inquiries within 24 hours.</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Call Us</h3>
+                            <a href="tel:+61418247842">+61 418 247 842</a>
+                            <p>Mon-Fri: 7am - 6pm<br>Sat: 8am - 4pm</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Service Area</h3>
+                            <p>Serving all suburbs across Sydney and surrounding regions. We travel to you for a convenient service experience.</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-file-contract"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Business Details</h3>
+                            <p>Licence: 486803C<br>ABN: 93 667 795 066</p>
+                            <p>Fully Insured & Licensed</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Follow Us</h3>
+                            <a href="https://instagram.com/cnc_pressure_cleaning" target="_blank">@cnc_pressure_cleaning</a>
+                            <p>1.1K followers • 255 following</p>
+                            <p>Check out our before & after photos!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Interested In</label>
+                            <select id="service" class="form-control" required>
+                                <option value="">Select a Service</option>
+                                <option value="pressure">Pressure Cleaning</option>
+                                <option value="sealing">Concrete Sealing</option>
+                                <option value="both">Both Services</option>
+                                <option value="other">Other Service</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message / Property Details</label>
+                            <textarea id="message" class="form-control" required placeholder="Please describe your project and property details..."></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Request Free Quote</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo">
+                        <div class="logo-icon">CNC</div>
+                        <div class="logo-text" style="color: white; font-size: 1.5rem;">CNC <span>Pressure Cleaning</span></div>
+                    </div>
+                    <p>Revealing the beauty of properties across Sydney with professional pressure cleaning and concrete sealing services since 2010.</p>
+                    <div class="social-links">
+                        <a href="https://instagram.com/cnc_pressure_cleaning" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="#about"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="#testimonials"><i class="fas fa-chevron-right"></i> Testimonials</a></li>
+                        <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Our Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Pressure Cleaning</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Concrete Sealing</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Driveway Cleaning</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> House Washing</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Commercial Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-phone"></i> +61 418 247 842</li>
+                        <li><i class="fas fa-envelope"></i> info@cncpressurecleaning.com.au</li>
+                        <li><i class="fas fa-clock"></i> Mon-Sat: 7am - 6pm</li>
+                        <li><i class="fas fa-file-contract"></i> Licence: 486803C</li>
+                        <li><i class="fas fa-file-alt"></i> ABN: 93 667 795 066</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 CNC Pressure Cleaning And Concrete Sealing PTY Ltd. All Rights Reserved. | Website Design Inspired by ZD Pressure Washing Interface</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const navMenu = document.getElementById('nav-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navMenu.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Form submission handling
+        const contactForm = document.querySelector('.contact-form form');
+        if(contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Thank you for your inquiry! We will contact you within 24 hours to provide your free quote.');
+                contactForm.reset();
+            });
+        }
+        
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if(window.scrollY > 100) {
+                header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.15)';
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+            } else {
+                header.style.boxShadow = 'var(--shadow)';
+                header.style.background = 'var(--white)';
+            }
+        });
+    </script>
+</body>
+</html>
